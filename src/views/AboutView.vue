@@ -19,7 +19,7 @@
             </div>
           </div>
 
-        <h2 id="technical-skills" class="animate__animated animate__slideInLeft">TECHNICAL SKILLS</h2>
+        <h2 id="skills" class="animate__animated animate__slideInLeft">SKILLS</h2>
       <!-- <div class="skills-container"> -->
         <swiper
         ref="swiperRef"
@@ -31,9 +31,9 @@
         }"
         :navigation="true"
         :modules="modules"
-        class="mySwiper technical-skills-swiper"
+        class="mySwiper skills-swiper"
       >
-        <swiper-slide v-for="skill in $store.state.technicalskills" :key="skill.id">
+        <swiper-slide v-for="skill in $store.state.skills" :key="skill.id">
           <div class="skills-card">
             <img :strc="skill.image" alt="Skill Image" />
             <p id="skil">{{ skill.name }}</p>
@@ -42,7 +42,7 @@
         </swiper-slide>
       </swiper>
 
-      <h2 id="soft-skills" class="animate__animated animate__slideInLeft">SOFT SKILLS</h2>
+      <!-- <h2 id="soft-skills" class="animate__animated animate__slideInLeft">SOFT SKILLS</h2>
       <swiper
         ref="swiperRef"
         :slidesPerView="3"
@@ -62,7 +62,7 @@
           </div>
           {{ console.log('Swiper slide rendered') }}
         </swiper-slide>
-      </swiper>
+      </swiper> -->
 
       <h2 id="badges" class="animate__animated animate__slideInLeft">MY BADGES</h2>
       <swiper
@@ -110,7 +110,6 @@ export default {
     },
   },
   mounted() {
-  console.log('Swiper components initialized');
   this.getData();
 },
   components: {
@@ -143,7 +142,7 @@ body {
 }
 
 .about {
-  height: 240vh;
+  height: 210vh;
   margin: 0;
   margin-top: 100px;
 }
@@ -219,10 +218,10 @@ margin-left: 200px;
   font-weight: bolder;
   /* background-color: red; */
 }
-#technical-skills {
+#skills {
   position: relative;
-  bottom: 180px;
-  left: -370px;
+  bottom: 100px;
+  left: -430px;
   font-size: 35px;
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
@@ -232,10 +231,10 @@ margin-left: 200px;
   color: #906046;
   text-decoration: underline;
 }
-.technical-skills-swiper{
+.skills-swiper{
   position: relative;
-  left: -490px;
-  top: -10px
+  left: -510px;
+  top: 80px
 }
 #card {
   display: inline-block;
@@ -277,8 +276,8 @@ margin-left: 200px;
 }
 #badges {
   position: relative;
-  top: 530px;
-  left: -630px;
+  top: 310px;
+  left: -590px;
   font-size: 35px;
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
@@ -298,8 +297,8 @@ margin-left: 200px;
 }
 .badges-swiper{
   position: relative;
-  top: 690px;
-  left: -740px;
+  top: 510px;
+  left: -680px;
 }
 .image{
   width: 70px !important;
@@ -308,7 +307,7 @@ margin-left: 200px;
   position: relative;
   /* left: 20px; */
 }
-#tskil {
+#skil {
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
   font-weight: 800;
@@ -389,8 +388,8 @@ margin-left: 200px;
 }
 #about {
   position: relative;
-  bottom: 750px;
-  left: 710px;
+  bottom: 640px;
+  left: 720px;
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
   font-weight: 800;
@@ -403,12 +402,12 @@ margin-left: 200px;
 #backgroundd {
   position: relative;
   width: 250%;
-  bottom: 500px;
+  bottom: 380px;
   background-color: #b98e77;
   color: white;
   height: auto;
-  margin-top: 30px;
-  left: 190px;
+  margin-top: 0px;
+  left: 130px;
   box-shadow: 8px 8px 8px #906046;
   transition: transform 0.7s ease-out;
 }
@@ -424,6 +423,7 @@ margin-left: 200px;
 }
 #description {
   margin-right: 50px;
+  margin-top: 10px;
   text-align: justify;
   font-style: italic;
   color: white;
@@ -437,7 +437,7 @@ margin-left: 200px;
 
 .img-fluid-sqare {
   position: relative;
-  top: 25px;
+  top: 15px;
   right: 50px;
 }
 .swiper-wrapper {
@@ -459,11 +459,12 @@ margin-left: 200px;
   #about{
     position: relative;
     top: -340px;
-    left: 530px!important;
+    left: 390px!important;
   }
   #skills {
     position: relative;
-    left: 570px;
+    left: 0px;
+    top: 600px;
   }
 
   #img {
@@ -494,13 +495,13 @@ margin-left: 200px;
   }
   .mySwiper {
     width: 600px;
-    top: 150px;
+    bottom: 150px;
     overflow: hidden;
     margin: 0;
     padding: 0;
     margin-right: 1in;
     position: relative;
-    left: 350px;
+    left: 20px;
   }
   .mySwiper .swiper-wrapper {
     width: auto !important;
@@ -522,10 +523,10 @@ margin-left: 200px;
     margin-left: 30px;
     margin-top: 60px;
   }
-  .technical-skills-swiper{
+  .skills-swiper{
   position: relative;
-  right: 50px;
-  top: 10px
+  left: 200px;
+  top: -100px
 }
   #btn {
     width: 80px;

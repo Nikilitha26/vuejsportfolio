@@ -79,12 +79,14 @@ export default {
 <style scoped>
 .home {
   height: 70vh;
-  margin: 0;
+  /* margin: 0; */
   background-color: hite;
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
+  /* position: relative;
+  bottom: 50px; */
 }
 
 .image-background {
