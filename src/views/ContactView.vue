@@ -274,6 +274,61 @@ export default {
   }
 
 
+  @media (max-width: 485px) {
+    .row {
+      flex-direction: column;
+    }
+    .col-md-4, .col-md-8 {
+      width: 100%;
+    }
+    .container{
+      position: relative;
+      left: 80px !important;
+      width: 110% !important;
+      font-size: 14px;
+      padding: 20px 30px; 
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      font-family: "Cormorant", serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+    }
+    .contact{
+        position: relative;
+        left: 10px;
+    } 
+    ul{
+        position: relative;
+        left: 5px;
+    }
+    label{
+        position: relative;
+        left: 20px;
+    }
+    .col-md-8{
+        position: relative;
+        right: 30px;
+    }
+    .col-md-4{
+        position: relative;
+        right: 20px;
+    }
+    #get{
+        position: relative;
+        left: 30px;
+    }
+    .form-control{
+        position: relative;
+        left: 60px;
+        margin-top: 20px;
+    }
+    .btn0{
+        position: relative;
+        right: 30px;
+    }
+  }
   @media (max-width: 600px) {
     .row {
       flex-direction: column;
@@ -282,6 +337,8 @@ export default {
       width: 100%;
     }
     .container{
+      /* position: relative; */
+      left: 80px;
       width: 80%;
       font-size: 14px;
       padding: 20px 30px; 

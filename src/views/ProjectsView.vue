@@ -80,7 +80,7 @@ export default {
   bottom: 220px;
 }
 .brr {
-  margin-top: 150px;
+  margin-top: 270px;
   text-decoration: underline;
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
@@ -90,7 +90,7 @@ export default {
 }
 #brr {
   position: relative;
-  top: 30px;
+  top: 60px;
 }
 .container {
   margin-top: 0;

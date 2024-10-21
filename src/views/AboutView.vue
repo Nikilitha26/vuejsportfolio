@@ -9,7 +9,7 @@
         <div id="backgroundd" class="container rounded p-4 bg-opacity-25" >
             <div class="row d-flex align-items-right">
               <div class="col-md-6">
-                <img id="img" src="https://nikilitha26.github.io/vue.jsImages/WhatsApp%20Image%202024-10-04%20at%2013.25.10_47246c9b.jpg" alt="Image" class="img-fluid-sqare" style="width: 250px; height: 300px; margin-left: 100px;">
+                <img id="img" src="https://nikilitha26.github.io/vue.jsImages/WhatsApp%20Image%202024-10-18%20at%2014.58.15_c4667568.jpg" alt="Image" class="img-fluid-sqare" style="width: 250px; height: 300px; margin-left: 100px;">
               </div>
               <div class="col-md-6 text-white" >
                 <p id="description" style="margin-right: 50px; font-style: italic;">
