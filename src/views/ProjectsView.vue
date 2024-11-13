@@ -1,8 +1,7 @@
 <template>
   <link
     rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  />
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
   <div class="projects">
     <h2 id="brr" class="brr animate__animated animate__slideInLeft">PROJECTS 👩🏻‍💻</h2>
 
@@ -80,7 +79,7 @@ export default {
   bottom: 220px;
 }
 .brr {
-  margin-top: 270px;
+  margin-top: 290px;
   text-decoration: underline;
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
@@ -93,6 +92,8 @@ export default {
   top: 60px;
 }
 .container {
+  position: relative;
+  top: 60px;
   margin-top: 0;
   padding-top: 0;
 }
@@ -147,12 +148,12 @@ export default {
 }
 
 .projects {
-  height: auto;
+  height: 187vh;
   width: 100%;
-  /* margin: 0; */
-  margin-top: -25px;
-  /* margin-top: 0;
-  padding-top: 0; */
+  position: relative;
+  bottom: 170px;
+  margin-top: 0;
+  padding-top: 0;
   /* background-image: url("https://i.pinimg.com/564x/db/71/eb/db71eb556f9ca6b9510391ed1ba528d4.jpg"); */
   /* background-size: cover; */
   /* background-position: center;
@@ -187,7 +188,7 @@ export default {
 }
 
 .row {
-  margin-top: 270px;
+  margin-top: 320px;
   position: relative;
   right: 90px;
 }
@@ -199,7 +200,7 @@ export default {
 
 #projects {
   position: relative;
-  bottom: 590px;
+  bottom: 790px;
   left: 640px;
   font-size: 40px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -235,6 +236,80 @@ export default {
   transition: 0.7s;
 }
 
+/* For small screens (mobile devices) */
+@media only screen and (max-width: 400px) {
+  /* .projects {
+    width: 100%;
+  } */
+  .row {
+    justify-content: center;
+    top: 10px;
+  }
+  .flip-card {
+    margin: 10px auto;
+  }
+  .brr {
+    text-align: center;
+    left: 90px !important;
+    right: 0;
+    position: relative;
+    top: 180px !important;
+    font-size: 35px;
+    /* margin-top: 150px; */
+  }
+  .projects {
+    height: auto;
+
+    max-width: 120px !important; 
+  margin: 0 auto;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+
+  }
+  .container{
+    position: relative;
+    top: 500px;
+  }
+}
+/* For small screens (mobile devices) */
+@media only screen and (max-width: 401px) and (max-width: 750px) {
+  /* .projects {
+    width: 100%;
+  } */
+  .row {
+    justify-content: center;
+    top: 10px;
+  }
+  .flip-card {
+    margin: 10px auto;
+  }
+  .brr {
+    text-align: center;
+    left: 90px !important;
+    right: 0;
+    position: relative;
+    top: 180px !important;
+    font-size: 35px;
+    /* margin-top: 150px; */
+  }
+  .projects {
+    height: auto;
+
+    max-width: 120px !important; 
+  margin: 0 auto;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+
+  }
+  .container{
+    position: relative;
+    top: 150px;
+  }
+}
 /* For small screens (mobile devices) */
 @media only screen and (max-width: 768px) {
   /* .projects {

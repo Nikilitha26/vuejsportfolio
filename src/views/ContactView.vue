@@ -32,25 +32,25 @@
 
       <div class="col-md-8">
         <h2 id="get">Get in Touch</h2>
-        <form @submit.prevent="handleSubmit" action="https://formspree.io/f/xanwydyn" method="POST">
+        <form @submit.prevent="handleSubmit" action="https://formspree.io/f/mbljyywd" method="POST">
           <div class="form-group">
     <label for="firstName">First Name</label>
-    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name..." style="width: 70%" v-model="firstName">
+    <input type="text" class="form-control"  name="FirstName" id="firstName" placeholder="Enter your first name..." style="width: 70%" v-model="firstName">
     <div v-if="errors.firstName" class="error">{{ errors.firstName }}</div>
   </div>
           <div class="form-group">
     <label for="lastName">Last Name</label>
-    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name..." style="width: 70%" v-model="lastName">
+    <input type="text" class="form-control"  name="LastName" id="lastName" placeholder="Enter your last name..." style="width: 70%" v-model="lastName">
     <div v-if="errors.lastName" class="error">{{ errors.lastName }}</div>
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" placeholder="Enter your email..." style="width: 70%" v-model="email">
+    <input type="email" class="form-control" name="Email" id="email" placeholder="Enter your email..." style="width: 70%" v-model="email">
     <div v-if="errors.email" class="error">{{ errors.email }}</div>
   </div>
   <div class="form-group">
     <label for="message">Message</label>
-    <textarea class="form-control" id="message" placeholder="Enter your message..." style="width: 70%" v-model="message"></textarea>
+    <textarea class="form-control" name="Message" id="message" placeholder="Enter your message..." style="width: 70%" v-model="message"></textarea>
     <div v-if="errors.message" class="error">{{ errors.message }}</div>
   </div>
           <button type="submit" class="btn0">Submit</button>
