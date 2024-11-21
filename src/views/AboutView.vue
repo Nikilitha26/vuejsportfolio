@@ -142,7 +142,7 @@ body {
 }
 
 .about {
-  height: 210vh;
+  height: 195vh;
   margin: 0;
   margin-top: 100px;
 }
@@ -343,7 +343,7 @@ margin-left: 200px;
   border: 1px solid #b98e77;
   border-radius: 10px;
   background-color: white;
-  width: 150px;
+  width: 200px !important;
   height: 140px;
   box-shadow: 6px 6px 6px #8e634c;
 }

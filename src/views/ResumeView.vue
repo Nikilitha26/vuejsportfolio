@@ -79,7 +79,7 @@ export default {
 @import "~animate.css/animate.min.css";
 
 .resume {
-  height: 150vh;
+  height: 140vh;
   margin: 0;
   overflow-x: hidden;
   margin-top: 110px;
@@ -114,7 +114,7 @@ export default {
   border: 1px solid #ddd;
   border-radius: 10px;
   width: 250px;
-  color: #b98e77;
+  color: #906046;
   flex: 1;
   position: relative;
   bottom: 210px;
@@ -154,7 +154,7 @@ export default {
   font-weight: 800;
   font-style: normal;
   text-align: center;
-  color: #b98e77;
+  color: #906046;
   text-decoration: underline;
 }
 #year {
@@ -170,7 +170,7 @@ export default {
   font-weight: 800;
   font-style: normal;
   text-align: center;
-  color: #b98e77;
+  color: #906046;
   text-decoration: underline;
 }
 #experience {
@@ -178,7 +178,7 @@ export default {
   top: 140px;
   right: 310px;
   text-decoration: underline;
-  color: #8e634c;
+  color: #906046;
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
   font-weight: 800;
@@ -209,12 +209,12 @@ export default {
   position: relative;
   bottom: 60px;
   right: 30px;
-  border: 1px solid #b98e77;
+  border: 1px solid #906046;
   border-radius: 10px;
   background-color: white;
   width: 250px;
-  color: #8e634c;
-  box-shadow: 6px 6px 6px #8e634c;
+  color: #906046;
+  box-shadow: 6px 6px 6px #906046;
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;
   font-weight: 800;
@@ -242,8 +242,8 @@ export default {
 }
 
 #btn {
-  background-color: #b98e77;
-  color: #fff;
+  background-color: #8e634c !important;
+  color: #fff !important;
   border: none;
   padding: 10px 10px;
   font-size: 16px;
@@ -252,8 +252,21 @@ export default {
 }
 
 #btn:hover {
-  background-color: #fff;
-  color: #b98e77;
+  background-color: #fff !important;
+  color: #8e634c !important;
+}
+.download-cv-btn{
+  background-color: #8e634c !important;
+  color: #fff !important;
+  border: none;
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.download-cv-btn:hover{
+  background-color: #fff !important;
+  color: #8e634c !important;
 }
 
 @media (max-width: 600px) {
