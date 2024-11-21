@@ -35,7 +35,7 @@
       >
         <swiper-slide v-for="skill in $store.state.skills" :key="skill.id">
           <div class="skills-card">
-            <img :strc="skill.image" alt="Skill Image" />
+            <img :src="skill.image" alt="Skill Image" />
             <p id="skil">{{ skill.name }}</p>
           </div>
           {{ console.log('Swiper slide rendered') }}
