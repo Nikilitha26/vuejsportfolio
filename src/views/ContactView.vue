@@ -32,27 +32,27 @@
 
       <div class="col-md-8">
         <h2 id="get">Get in Touch</h2>
-        <form @submit.prevent="handleSubmit" action="https://formspree.io/f/mbljyywd" method="POST">
+        <form @submit.prevent="handleSubmit">
           <div class="form-group">
-    <label for="firstName">First Name</label>
-    <input type="text" class="form-control"  name="FirstName" id="firstName" placeholder="Enter your first name..." style="width: 70%" v-model="firstName">
-    <div v-if="errors.firstName" class="error">{{ errors.firstName }}</div>
-  </div>
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="FirstName" id="firstName" placeholder="Enter your first name..." style="width: 70%" v-model="formData.firstName">
+            <div v-if="errors.firstName" class="error">{{ errors.firstName }}</div>
+          </div>
           <div class="form-group">
-    <label for="lastName">Last Name</label>
-    <input type="text" class="form-control"  name="LastName" id="lastName" placeholder="Enter your last name..." style="width: 70%" v-model="lastName">
-    <div v-if="errors.lastName" class="error">{{ errors.lastName }}</div>
-  </div>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" class="form-control" name="Email" id="email" placeholder="Enter your email..." style="width: 70%" v-model="email">
-    <div v-if="errors.email" class="error">{{ errors.email }}</div>
-  </div>
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea class="form-control" name="Message" id="message" placeholder="Enter your message..." style="width: 70%" v-model="message"></textarea>
-    <div v-if="errors.message" class="error">{{ errors.message }}</div>
-  </div>
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="LastName" id="lastName" placeholder="Enter your last name..." style="width: 70%" v-model="formData.lastName">
+            <div v-if="errors.lastName" class="error">{{ errors.lastName }}</div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="mail" id="email" placeholder="Enter your email..." style="width: 70%" v-model="formData.email">
+            <div v-if="errors.email" class="error">{{ errors.email }}</div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" name="Message" id="message" placeholder="Enter your message..." style="width: 70%" v-model="formData.message"></textarea>
+            <div v-if="errors.message" class="error">{{ errors.message }}</div>
+          </div>
           <button type="submit" class="btn0">Submit</button>
         </form>
       </div>
@@ -68,44 +68,81 @@
 </template>
 
 <script>
+import ContactView from '../views/ContactView.vue';
+
 export default {
   name: "ContactForm",
   data() {
     return {
       submitted: false,
-      firstName: '',
-      lastName: '',
-      email: '',
-      message: '',
+      formData: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+      },
       errors: {}
     }
   },
   methods: {
     handleSubmit() {
+      if (this.validateForm()) {
+        const formData = new FormData();
+        formData.append('firstName', this.formData.firstName);
+        formData.append('lastName', this.formData.lastName);
+        formData.append('email', this.formData.email);
+        formData.append('message', this.formData.message);
+
+        fetch('https://formspree.io/f/mbljyywd', { // Your Formspree endpoint
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json' // Optional: Set the Accept header
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          this.submitted = true; // Show success message
+          console.log('Form submitted successfully');
+          this.resetForm();
+        })
+        .catch(error => console.error(error));
+      }
+    },
+    validateForm() {
+      const errors = {};
+      if (!this.formData.firstName) {
+        errors.firstName = 'First name is required';
+      }
+      if (!this.formData.lastName) {
+        errors.lastName = 'Last Name is required';
+      }
+      if (!this.formData.email) {
+        errors.email = 'Email is required';
+      } else if (!this.validateEmail(this.formData.email)) {
+        errors.email = 'Invalid email address';
+      }
+      if (!this.formData.message) {
+        errors.message = 'Message is required';
+      }
+      this.errors = errors;
+      return Object.keys(errors).length === 0;
+    },
+    validateEmail(email) {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      return emailRegex.test(email);
+    },
+    resetForm() {
+      this.formData.firstName = '';
+      this.formData.lastName = '';
+      this.formData.email = '';
+      this.formData.message = '';
       this.errors = {};
-      if (!this.firstName) {
-        this.errors.firstName = "First name is required";
-      }
-      if (!this.lastName) {
-        this.errors.lastName = "Last Name is required";
-      }
-      if (!this.email) {
-        this.errors.email = "Email is required";
-      }
-      if (!this.message) {
-        this.errors.message = "Message is required";
-      }
-      if (Object.keys(this.errors).length === 0) {
-        this.firstName = '';
-        this.lastName = '';
-        this.email = '';
-        this.message = '';
-        this.submitted = true;
-      }
     },
     closePopup() {
       this.submitted = false;
-      this.$router.push({ name: 'home' });
+      this.resetForm();
     }
   }
 }
