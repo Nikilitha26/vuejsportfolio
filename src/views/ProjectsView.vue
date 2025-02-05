@@ -48,7 +48,7 @@
         </div>
       </div>
       <!-- WordPress Card -->
-      <div class="col-md-4">
+      <div id="word" class="col-md-4">
         <div class="flip-card">
           <div class="flip-card-icons">
             <a href="https://dev-e-commerce-niki.pantheonsite.io/" target="_blank">
@@ -76,8 +76,7 @@
                  and Bricks Builder, emphasizing clean code, responsive design, 
                  and easy customization. It includes all essential eCommerce pages
                   and is ideal for fashion and lifestyle brands. The template 
-                  features bold typography, vintage gradients, and minimalist grids,
-                   with SEO optimization to boost store rankings.
+                  features bold typography, vintage gradients, and minimalist grids, with SEO optimization to boost store rankings.
               </p>
             </div>
           </div>
@@ -107,6 +106,11 @@ export default {
 
 <style scoped>
 @import "~animate.css/animate.min.css";
+
+#word{
+  position: relative;
+  left: 380px;
+}
 
 .flip-card {
   width: 300px;

@@ -15,7 +15,7 @@
           </li>
           <li>
             <i class="fas fa-map-marker-alt"></i>
-            <span>Khayeliysha, Site C, Western Cape, 7744</span>
+            <span>Khayelitsha, Site C, Western Cape, 7744</span>
           </li>
             <li class="center-icons">
             &nbsp;&nbsp;&nbsp;&nbsp;
