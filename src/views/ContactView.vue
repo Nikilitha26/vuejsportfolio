@@ -93,7 +93,7 @@ export default {
         formData.append('email', this.formData.email);
         formData.append('message', this.formData.message);
 
-        fetch('https://formspree.io/f/mbljyywd', { // Your Formspree endpoint
+        fetch('https://formspree.io/f/xanwydyn', { // Your Formspree endpoint
           method: 'POST',
           body: formData,
           headers: {
