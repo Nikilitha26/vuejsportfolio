@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h2 class="contact">Contact Us</h2>
+        <h2 class="contact">Contact Me</h2>
         <div style="margin-bottom: 40px;"></div>
         <ul class="list-unstyled">
           <li>
