@@ -147,7 +147,7 @@ export default {
 #education {
   position: relative;
   bottom: 420px;
-  left: 950px;
+  left: 980px;
   font-size: 35px;
   font-family: "Cormorant", serif;
   font-optical-sizing: auto;

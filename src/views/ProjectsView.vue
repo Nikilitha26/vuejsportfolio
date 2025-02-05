@@ -1,50 +1,92 @@
 <template>
+
   <link
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-  <div class="projects">
-    <h2 id="brr" class="brr animate__animated animate__slideInLeft">PROJECTS 👩🏻‍💻</h2>
 
-    <div class="container">
-      <div class="row">
-        <div v-for="project in $store.state.projects" :key="project.id" class="col-md-4">
-          <div class="flip-card">
-            <div class="flip-card-icons">
-              <a :href="project.github" target="_blank"
-                ><img
-                  id="icongit"
-                  class="animate__animated animate__pulse animate__repeat animate__infinite"
-                  src="https://raw.githubusercontent.com/Nikilitha26/vue.jsImages/1a7775df88538582dec5b01d37c3f33e483b4f49/25231.png"
-              /></a>
-              <a :href="project.vercel" target="_blank"
-                ><img
-                  id="iconvercel"
-                  class="animate__animated animate__pulse animate__repeat animate__infinite"
-                  src="https://raw.githubusercontent.com/Nikilitha26/vue.jsImages/1a7775df88538582dec5b01d37c3f33e483b4f49/vercel-logo-removebg-preview.png"
-                  alt=""
-              /></a>
+<div class="projects">
+  <h2 id="brr" class="brr animate__animated animate__slideInLeft">
+    PROJECTS 👩🏻‍💻
+  </h2>
+
+  <div class="container">
+    <div class="row">
+      <div v-for="project in $store.state.projects" :key="project.id" class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-icons">
+            <a :href="project.github" target="_blank">
+              <img
+                id="icongit"
+                class="animate__animated animate__pulse animate__repeat animate__infinite"
+                src="https://raw.githubusercontent.com/Nikilitha26/vue.jsImages/1a7775df88538582dec5b01d37c3f33e483b4f49/25231.png"
+            /></a>
+            <a :href="project.vercel" target="_blank">
+              <img
+                id="iconvercel"
+                class="animate__animated animate__pulse animate__repeat animate__infinite"
+                src="https://raw.githubusercontent.com/Nikilitha26/vue.jsImages/1a7775df88538582dec5b01d37c3f33e483b4f49/vercel-logo-removebg-preview.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                id="projjects"
+                :src="project.image"
+                alt="Project Image"
+                class="img-fluid flip"
+              /><br />
+              <h5 class="card-title">{{ project.name }}</h5>
             </div>
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img
-                  id="projjects"
-                  :src="project.image"
-                  alt="Project Image"
-                  class="img-fluid flip"
-                /><br />
-                <h5 class="card-title">{{ project.name }}</h5>
-              </div>
-              <div class="flip-card-back">
-                <p id="card-text" class="card-text" style="text-align: center">
-                  {{ project.description }}
-                </p>
-              </div>
+            <div class="flip-card-back">
+              <p id="card-text" class="card-text" style="text-align: center">
+                {{ project.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- WordPress Card -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-icons">
+            <a href="https://dev-e-commerce-niki.pantheonsite.io/" target="_blank">
+              <img
+                id="iconwordpress"
+                class="animate__animated animate__pulse animate__repeat animate__infinite"
+                src="https://nikilitha26.github.io/vue.jsImages/wordpress-black1876-removebg-preview.png"
+                alt="WordPress Logo"
+              />
+            </a>
+          </div>
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                id="projjects"
+                src="https://nikilitha26.github.io/vue.jsImages/Screenshot%202025-02-05%20110740.png"
+                alt="WordPress Project Image"
+                class="img-fluid flip"
+              /><br />
+              <h5 class="card-title">WordPress E-Commerce</h5>
+            </div>
+            <div class="flip-card-back">
+              <p id="card-text" class="card-text" style="text-align: center">
+                TrendFusion is a retro-themed eCommerce template for WooCommerce
+                 and Bricks Builder, emphasizing clean code, responsive design, 
+                 and easy customization. It includes all essential eCommerce pages
+                  and is ideal for fashion and lifestyle brands. The template 
+                  features bold typography, vintage gradients, and minimalist grids,
+                   with SEO optimization to boost store rankings.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
 </template>
 
 <script>
@@ -148,7 +190,7 @@ export default {
 }
 
 .projects {
-  height: 187vh;
+  height: 245vh;
   width: 100%;
   position: relative;
   bottom: 170px;
@@ -234,6 +276,13 @@ export default {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: 0.7s;
+}
+
+#iconwordpress{
+  position: relative;
+  top: 15px;
+  width: 60px;
+  height: 45px;
 }
 
 /* For small screens (mobile devices) */
