@@ -93,17 +93,17 @@ export default {
         formData.append('email', this.formData.email);
         formData.append('message', this.formData.message);
 
-        fetch('https://formspree.io/f/xanwydyn', { // Your Formspree endpoint
+        fetch('https://formspree.io/f/xanwydyn', { 
           method: 'POST',
           body: formData,
           headers: {
-            'Accept': 'application/json' // Optional: Set the Accept header
+            'Accept': 'application/json' 
           }
         })
         .then(response => response.json())
         .then(data => {
           console.log(data);
-          this.submitted = true; // Show success message
+          this.submitted = true; 
           console.log('Form submitted successfully');
           this.resetForm();
         })
