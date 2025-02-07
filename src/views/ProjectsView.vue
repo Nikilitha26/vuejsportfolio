@@ -64,7 +64,7 @@
             <div class="flip-card-front">
               <img
                 id="projjects"
-                src="https://nikilitha26.github.io/vue.jsImages/Screenshot%202025-02-05%20110740.png"
+                src="https://nikilitha26.github.io/vue.jsImages/TrendFusion.jpg"
                 alt="WordPress Project Image"
                 class="img-fluid flip"
               /><br />
@@ -272,7 +272,7 @@ export default {
 
 #projjects {
   height: 200px;
-  width: fit-content;
+  width: 350px;
   transition: transform 0.5s;
   transition: transform 0.7s ease-out;
 }
