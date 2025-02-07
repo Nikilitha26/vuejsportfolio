@@ -119,7 +119,7 @@ export default {
   border-radius: 10px;
   perspective: 1000px;
   margin: 20px;
-  padding: 10px;
+  padding: 0px;
   position: relative;
   left: 100px;
   bottom: 220px;
@@ -272,6 +272,7 @@ export default {
 
 #projjects {
   height: 200px;
+  width: fit-content;
   transition: transform 0.5s;
   transition: transform 0.7s ease-out;
 }
